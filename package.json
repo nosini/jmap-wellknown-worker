@@ -1,0 +1,15 @@
+{
+  "name": "jmap-wellknown-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker that advertises JMAP autodiscovery (/.well-known/jmap) on your email domains.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

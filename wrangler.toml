@@ -1,0 +1,30 @@
+name = "jmap-wellknown"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# --- Deployment -------------------------------------------------------------
+# This repo is deployed by Cloudflare Workers Builds on push to GitHub.
+# Routes and variables are intentionally NOT committed here so that your real
+# domains and mail host stay out of git. Set them once in the dashboard:
+#
+# Routes  (Workers & Pages -> jmap-wellknown -> Settings -> Domains & Routes):
+#   yourdomain-one.tld/.well-known/jmap
+#   yourdomain-two.tld/.well-known/jmap
+#
+# Variables (Settings -> Variables and Secrets), plaintext vars (not secrets):
+#   JMAP_TARGETS = {"yourdomain-one.tld":"https://mail.yourdomain-one.tld","yourdomain-two.tld":"https://mail.yourdomain-two.tld"}
+#   JMAP_WELL_KNOWN_PATH = /.well-known/jmap   (optional; default shown)
+#   JMAP_REDIRECT_STATUS = 302                 (optional; default shown)
+#
+# --- Or keep everything in-repo instead ------------------------------------
+# If you would rather not use the dashboard, uncomment and fill these:
+#
+# routes = [
+#   { pattern = "yourdomain-one.tld/.well-known/jmap", zone_name = "yourdomain-one.tld" },
+#   { pattern = "yourdomain-two.tld/.well-known/jmap", zone_name = "yourdomain-two.tld" },
+# ]
+#
+# [vars]
+# JMAP_TARGETS = "{\"yourdomain-one.tld\":\"https://mail.yourdomain-one.tld\",\"yourdomain-two.tld\":\"https://mail.yourdomain-two.tld\"}"
+# JMAP_WELL_KNOWN_PATH = "/.well-known/jmap"
+# JMAP_REDIRECT_STATUS = "302"

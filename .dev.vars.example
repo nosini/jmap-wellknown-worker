@@ -1,0 +1,4 @@
+# Copy to .dev.vars (gitignored) for local `wrangler dev`. Not used in prod.
+JMAP_TARGETS={"yourdomain-one.tld":"https://mail.yourdomain-one.tld","yourdomain-two.tld":"https://mail.yourdomain-two.tld"}
+JMAP_WELL_KNOWN_PATH=/.well-known/jmap
+JMAP_REDIRECT_STATUS=302
